@@ -1,0 +1,6 @@
+<div class="help-block"
+     ng-messages="form[field].$error"
+     ng-show="form[field].$touched && form[field].$invalid">
+    <div ng-messages-include="error-messages"></div>
+    <p ng-message="symfony">{{message}}</p>
+</div>
