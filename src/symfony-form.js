@@ -30,7 +30,7 @@
             templateUrl: 'views/validator.view.html',
             scope: {
                 field: "@",
-                symfonyForm: "@",
+                symfonyForm: "=",
                 model: "=",
                 errors: "="
             },
