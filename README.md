@@ -13,6 +13,12 @@ Install with bower:
 $ bower install symfony-form --save
 ```
 
+Install with npm:
+
+```bash
+$ npm install symfony-form
+```
+
 Load the `symfony-form` module in your app.
 
 ```javascript
