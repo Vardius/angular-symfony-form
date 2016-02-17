@@ -9,13 +9,13 @@
 (function () {
     'use strict';
 
-    angular
+    var symfonyForm = angular
         .module('symfony-form', [
             'ngMessages'
         ])
         .directive('validator', validator)
         .run(run)
-    ;
+        ;
 
     function run($templateCache, $http) {
         $http.get('views/messages.view.html').then(function (response) {
@@ -71,4 +71,5 @@
         }
     }
 
+    exports.symfonyForm = symfonyForm;
 })();
