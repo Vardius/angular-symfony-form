@@ -6,11 +6,24 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-(function () {
+(function (root, factory) {
+    'use strict';
+    if (typeof define === 'function' && define.amd) {
+        define(['angular'], factory);
+    } else if (typeof module !== 'undefined' && typeof module.exports === 'object') {
+        module.exports = factory(require('angular'));
+    } else {
+        return factory(root.angular);
+    }
+}(this, symfonyForm));
+
+function symfonyForm(angular) {
     'use strict';
 
+    var moduleName = 'symfony-form';
+
     angular
-        .module('symfony-form', [
+        .module(moduleName, [
             'ngMessages'
         ])
         .directive('validator', validator)
@@ -71,4 +84,5 @@
         }
     }
 
-})();
+    return moduleName;
+}
