@@ -22,7 +22,9 @@
     "start": "node app",
     "coveralls": "cat ./reports/coverage/*/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   },
-  "dependencies": {},
+  "dependencies": {
+    "angular-messages": "^1.5.0"
+  },
   "devDependencies": {
     "connect-livereload": "~0.4.0",
     "coveralls": "~2.10.0",

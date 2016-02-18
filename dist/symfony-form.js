@@ -21,10 +21,11 @@ function symfonyForm(angular) {
     'use strict';
 
     var moduleName = 'symfony-form';
+    var messagesModule = require('angular-messages') || 'ngMessages';
 
     angular
         .module(moduleName, [
-            'ngMessages'
+            messagesModule
         ])
         .directive('validator', validator)
         .run(run)
