@@ -17,18 +17,20 @@
     }
 }(this, symfonyForm));
 
+var messages = require('angular-messages');
+
 function symfonyForm(angular) {
     'use strict';
 
     var moduleName = 'symfony-form';
-    var messagesModule = require('angular-messages') || 'ngMessages';
+    var messagesModule = messages || 'ngMessages';
 
     angular
         .module(moduleName, [
             messagesModule
         ])
         .directive('validator', validator)
-        .run(run)
+        .run(['$templateCache', '$http', run])
     ;
 
     function run($templateCache, $http) {
