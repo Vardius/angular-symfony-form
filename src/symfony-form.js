@@ -10,7 +10,7 @@
     'use strict';
 
     angular
-        .module('symfony-form', [
+        .module('vSymfonyForm', [
             'ngMessages'
         ])
         .directive('validator', validator)

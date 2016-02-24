@@ -1,12 +1,12 @@
 {
-  "name": "symfony-form",
+  "name": "angular-symfony-form",
   "description": "Form components for Angular Js, symfony2 form validations.",
   "authors": [
     "Rafał Lorenz <vardius@gmail.com>"
   ],
   "version": "0.1.0",
   "main": [
-    "dist/symfony-form.js"
+    "dist/angular-symfony-form.js"
   ],
   "ignore": [
     "app",

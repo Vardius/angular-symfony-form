@@ -1,21 +1,21 @@
 {
-  "name": "symfony-form",
+  "name": "angular-symfony-form",
   "description": "Form components for Angular Js, symfony2 form validations.",
   "private": false,
   "version": "0.1.6",
-  "homepage": "https://github.com/Vardius/symfony-form",
+  "homepage": "https://github.com/Vardius/angular-symfony-form",
   "author": {
     "name": "Rafał Lorenz",
     "email": "vardius@gmail.com"
   },
   "readmeFilename": "README.md",
-  "main": "dist/symfony-form.js",
+  "main": "dist/angular-symfony-form.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/Vardius/symfony-form.git"
+    "url": "git://github.com/Vardius/angular-symfony-form.git"
   },
   "bugs": {
-    "url": "https://github.com/Vardius/symfony-form/issues"
+    "url": "https://github.com/Vardius/angular-symfony-form/issues"
   },
   "scripts": {
     "test": "grunt test-phantom",

@@ -22,7 +22,7 @@ var messages = require('angular-messages');
 function symfonyForm(angular) {
     'use strict';
 
-    var moduleName = 'symfony-form';
+    var moduleName = 'vSymfonyForm';
     var messagesModule = messages || 'ngMessages';
 
     angular
