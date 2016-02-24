@@ -1,4 +1,4 @@
-symfony-form
+angular-symfony-form
 ======================
 
 Form components for Angular Js, symfony2 form validations.
@@ -10,19 +10,19 @@ For usage and examples go to app directory
 Install with bower:
 
 ```bash
-$ bower install symfony-form --save
+$ bower install angular-symfony-form --save
 ```
 
 Install with npm:
 
 ```bash
-$ npm install symfony-form
+$ npm install angular-symfony-form
 ```
 
-Load the `symfony-form` module in your app.
+Load the `vSymfonyForm` module in your app.
 
 ```javascript
-angular.module('app', ['symfony-form']);
+angular.module('app', ['vSymfonyForm']);
 ```
 
 ## Usage Example
