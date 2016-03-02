@@ -27,7 +27,7 @@
     function validator() {
         return {
             restrict: "E",
-            templateUrl: 'views/validator.view.html',
+            templateUrl: './views/validator.view.html',
             scope: {
                 field: "@",
                 symfonyForm: "=",
