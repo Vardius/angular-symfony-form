@@ -1,45 +1,24 @@
 /**
- * This file is part of the symfony-form package.
+ * This file is part of the angular-repository package.
  *
  * (c) Rafał Lorenz <vardius@gmail.com>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-(function () {
-    'use strict';
 
-    angular
-        .module('vSymfonyForm', [
-            'ngMessages'
-        ])
-        .directive('validator', validator)
-        .run(run)
-    ;
-
-    function run($templateCache, $http) {
-        $http.get('views/messages.view.html').then(function (response) {
-                $templateCache.put('error-messages', response.data);
-            }
-        );
-    }
-
-    function validator() {
-        return {
-            restrict: "E",
-            templateUrl: './views/validator.view.html',
-            scope: {
-                field: "@",
-                symfonyForm: "=",
-                model: "=",
-                errors: "="
-            },
-            require: ['^form'],
-
-            link: link
+export class ValidatorComponent {
+    constructor() {
+        this.template = require('./../views/validator.html');
+        this.restrict = "E";
+        this.bind = {
+            field: "@",
+            symfonyForm: "=",
+            model: "=",
+            errors: "="
         };
-
-        function link(scope, element, attrs, $rootScope) {
+        this.require = ['^form'];
+        this.link = (scope, element, attrs, $rootScope) => {
             scope.form = $rootScope[0];
 
             scope.$watch('errors', function (newValue, oldValue) {
@@ -70,5 +49,4 @@
             });
         }
     }
-
-})();
+}
