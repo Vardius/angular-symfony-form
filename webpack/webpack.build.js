@@ -4,7 +4,7 @@ var webpack = require('webpack');
 module.exports = {
     entry: './src/app.js',
     output: {
-        filename: 'angular-symfony-acl.min.js',
+        filename: 'angular-symfony-form.min.js',
         path: 'dist'
     },
     resolve: {
