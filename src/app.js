@@ -7,7 +7,6 @@
  * file that was distributed with this source code.
  */
 
-import "angular-messages";
 import {ValidatorComponent} from "./components/ValidatorComponent";
 import {run as templateRun} from "./configs/template";
 
