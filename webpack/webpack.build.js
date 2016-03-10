@@ -14,6 +14,10 @@ module.exports = {
     resolveLoader: {
         modulesDirectories: ["node_modules"]
     },
+    externals: {
+        'angular': 'angular',
+        'angular-messages': 'angular-messages'
+    },
     plugins: [
         new webpack.ProvidePlugin({_: 'lodash'}),
         new webpack.optimize.OccurenceOrderPlugin(),
