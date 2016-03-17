@@ -2,7 +2,7 @@
   "name": "angular-symfony-form",
   "description": "Form component for Angular Js, symfony2 form validations.",
   "private": false,
-  "version": "2.0.4",
+  "version": "3.0.0",
   "homepage": "https://github.com/Vardius/angular-symfony-form",
   "author": {
     "name": "Rafał Lorenz",
