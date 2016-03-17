@@ -1,5 +1,5 @@
 /**
- * This file is part of the angular-repository package.
+ * This file is part of the angular-symfony-form package.
  *
  * (c) Rafał Lorenz <vardius@gmail.com>
  *

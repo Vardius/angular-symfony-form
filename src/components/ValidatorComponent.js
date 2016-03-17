@@ -1,5 +1,5 @@
 /**
- * This file is part of the angular-repository package.
+ * This file is part of the angular-symfony-form package.
  *
  * (c) Rafał Lorenz <vardius@gmail.com>
  *
@@ -7,46 +7,20 @@
  * file that was distributed with this source code.
  */
 
+import {ValidatorController} from "./../controllers/ValidatorController";
+
 export class ValidatorComponent {
     constructor() {
-        this.template = require('./../views/validator.html');
-        this.restrict = "E";
-        this.bind = {
+        this.require = {
+            formCtrl: '^form'
+        };
+        this.bindings = {
             field: "@",
-            symfonyForm: "=",
+            form: "=",
             model: "=",
             errors: "="
         };
-        this.require = ['^form'];
-        this.link = (scope, element, attrs, $rootScope) => {
-            scope.form = $rootScope[0];
-
-            scope.$watch('errors', function (newValue, oldValue) {
-                if (newValue == oldValue) {
-                    return;
-                }
-
-                if (newValue && scope.errors) {
-                    scope.message = scope.errors[scope.symfonyForm + '_' + scope.field];
-                    if (scope.message) {
-                        scope.form[scope.field].$invalid = true;
-                        scope.form[scope.field].$touched = true;
-                        scope.form[scope.field].$error['symfony'] = true;
-                    }
-                } else {
-                    delete scope.form[scope.field].$error['symfony'];
-                }
-            });
-
-            scope.$watch('model', function (newValue, oldValue) {
-                if (newValue == oldValue) {
-                    return;
-                }
-
-                if (scope.model && scope.form[scope.field].$error['symfony']) {
-                    delete scope.form[scope.field].$error['symfony'];
-                }
-            });
-        }
+        this.template = require('./../views/validator.html');
+        this.controller = ValidatorController;
     }
 }
