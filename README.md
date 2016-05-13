@@ -78,7 +78,7 @@ Setup form fields validation:
                 />
             </div>
             <div class="col-lg-12">
-                <validator symfony-form="vm.symfonyForm" field="username" model="vm.username" errors="vm.errors"></validator>
+                <validator form="vm.symfonyForm" field="username" model="vm.username" errors="vm.errors"></validator>
             </div>
         </div>
     </div>
